@@ -51,6 +51,8 @@ func _physics_process(delta):
 		velocity = move_and_slide(velocity, FLOOR)
 		
 		# get collision objects
+		# only kills player if player is moving
+		# to kill a standing player, implement in Enemy node
 		if get_slide_count() > 0:
 			# check what the collisions are
 			for i in range(get_slide_count()):

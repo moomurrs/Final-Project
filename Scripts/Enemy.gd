@@ -1,3 +1,7 @@
+# Game Jam 2020
+# Programmer: Murun T
+# Team: TP Gang
+
 extends KinematicBody2D
 
 const GRAVITY = 10
@@ -31,6 +35,13 @@ func _physics_process(delta):
 	if is_on_wall():
 		direction *= -1
 	
-	
+	# get collision objects
+	# kills a standing player
+	if get_slide_count() > 0:
+		# check what the collisions are
+		for i in range(get_slide_count()):
+			# if the collision object is Enemey, kill player
+			if "Player" in get_slide_collision(i).collider.name:
+				get_slide_collision(i).collider.dead()
 		
 	
