@@ -8,24 +8,32 @@ const FLOOR = Vector2(0, -1)
 var onGround = false
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func _physics_process(delta):
 	# horizontal movement
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
+		
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = false
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -SPEED
+		
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = true
 	else:
 		velocity.x = 0
+		$AnimatedSprite.play("idle")
 	
 	if Input.is_action_pressed("ui_up"):
 		if onGround:
 			velocity.y = JUMP
 			onGround = false
+			$AnimatedSprite.play("jump")
 	
 	# apply gravity
 	velocity.y += GRAVITY
