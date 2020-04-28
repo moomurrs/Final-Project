@@ -11,12 +11,26 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	# control the direction of movement
 	velocity.x = SPEED * direction
 	
+	# rotate the virus accordingly
+	if	direction == 1:
+		#$Sprite.flip_h = false
+		rotate(delta)
+	else:
+		rotate(-delta)
+		#$Sprite.flip_h = true
+	
 	velocity.y += GRAVITY
-	rotate(delta)
+	
 	
 	velocity = move_and_slide(velocity, FLOOR)
 	
+	# flip the direction on wall detection
 	if is_on_wall():
 		direction *= -1
+	
+	
+		
+	
