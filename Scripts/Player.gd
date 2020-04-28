@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
 var velocity = Vector2()
-const SPEED = 60
+const SPEED = 150
 const GRAVITY = 20
-const JUMP = -200
+const JUMP = -400
 const FLOOR = Vector2(0, -1)
-
+var onGround = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,9 +23,20 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	if Input.is_action_pressed("ui_up"):
-		velocity.y = JUMP
+		if onGround:
+			velocity.y = JUMP
+			onGround = false
 	
 	# apply gravity
 	velocity.y += GRAVITY
+	
+	if is_on_floor():
+		onGround = true
+	else:
+		onGround = false
+	
+	
 	# apply movement
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity, FLOOR)
+	
+	
