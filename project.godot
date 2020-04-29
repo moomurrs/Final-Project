@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Final-Project"
 run/main_scene="res://Scenes/World.tscn"
+boot_splash/use_filter=false
 config/icon="res://icon.png"
 
 [rendering]
