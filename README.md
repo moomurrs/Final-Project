@@ -2,4 +2,4 @@
 Game Jam
 
 Original design by Casey
-Character sprite from gameart2d.com
+Sprite from gameart2d.com and clipart.com
