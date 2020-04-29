@@ -1,4 +1,4 @@
-# Supply Run <img src="Assets/virus1.png" width = 100>
+# Supply Run <img src="Assets/virus1.png" width = 50>
 ## by TP Gang
 ### For BL-MSCH-C220 at Indiana University, Bloomington
 ### April 29, 2020
