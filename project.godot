@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Final-Project"
-run/main_scene="res://Scenes/World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/MainScreen.tscn"
+config/icon="res://Assets/virus1.png"
 
 [autoload]
 

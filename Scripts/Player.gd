@@ -91,7 +91,7 @@ func dead():
 
 func _on_Timer_timeout():
 	# call death screen
-	get_tree().change_scene("res://Scenes/Death.tscn")
+	get_tree().change_scene("res://Scenes/EndScreen.tscn")
 
 	
 

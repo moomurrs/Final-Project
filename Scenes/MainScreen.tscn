@@ -7,7 +7,7 @@
 [ext_resource path="res://our-story-begins/Our Story Begins Free/Our Story Begins FREE.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 50
+size = 80
 outline_color = Color( 0.0588235, 0.0509804, 0.0509804, 1 )
 use_mipmaps = true
 font_data = ExtResource( 5 )
@@ -39,12 +39,14 @@ __meta__ = {
 }
 
 [node name="Title" parent="." instance=ExtResource( 3 )]
-margin_left = -94.0
-margin_top = 190.0
-margin_right = 127.0
-margin_bottom = 223.0
+margin_left = -153.85
+margin_top = 169.1
+margin_right = 200.15
+margin_bottom = 228.1
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
