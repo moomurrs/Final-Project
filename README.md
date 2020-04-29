@@ -18,7 +18,7 @@ The only fix would be to manually fix every sprite frame to move the character t
 ## Technologies and Resources Used 
 Game engine: Godot \
 Sprites: gameart2d.com and clipart.com \
-Sounds: freesound.org \
+Sounds: freesound.org 
 
 ## Objective of the Game
 The goal of the game is to collect the most amount of toilet paper without touching the virus. This will be challenging as the virus spawns every few seconds. You'll win the game if you can make it to the exit!
