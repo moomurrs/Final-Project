@@ -93,3 +93,9 @@ func _on_Timer_timeout():
 	get_tree().change_scene("res://Scenes/Death.tscn")
 
 	
+
+# Change to the Win screen if the player makes it to the door
+func _on_Area2D_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene("res://Scenes/EndScreen.tscn")
+		

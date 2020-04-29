@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GroundTile.tres" type="TileSet" id=2]
@@ -7,10 +7,14 @@
 [ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=7]
+[ext_resource path="res://Assets/door.PNG" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 85.9277, 73.3728 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 7 )
@@ -22,7 +26,7 @@ position = Vector2( 101.067, 459.917 )
 scale = Vector2( 0.03, 0.03 )
 tile_set = ExtResource( 2 )
 format = 1
-tile_data = PoolIntArray( 10158232, 0, 0, 10158276, 0, 0, 10158320, 0, 0, 10158364, 0, 0, 10158408, 0, 0, 15597524, 0, 0, 15534404, 0, 0, 15598020, 0, 0, 18022400, 0, 0, 18022445, 0, 0, 18022490, 0, 0, 18022534, 0, 0, 18022578, 0, 0, 18022622, 0, 0, 18022666, 0, 0, 18022710, 0, 0, 18022754, 0, 0, 18022798, 0, 0, 18022842, 0, 0, 18022886, 0, 0, 18022930, 0, 0, 18022973, 0, 0, 18023017, 0, 0, 18023061, 0, 0, 18023105, 0, 0, 18023149, 0, 0, 18023193, 0, 0, 18023236, 0, 0, 18023280, 0, 0, 18023324, 0, 0, 18023367, 0, 0, 18023410, 0, 0, 18023453, 0, 0, 18023497, 0, 0, 18023541, 0, 0, 18023585, 0, 0, 18023629, 0, 0, 18023673, 0, 0, 18023717, 0, 0, 18023761, 0, 0, 18023805, 0, 0, 18023849, 0, 0, 18023893, 0, 0, 18023937, 0, 0, 18023981, 0, 0, 18024025, 0, 0, 18024069, 0, 0, 18024113, 0, 0, 18024157, 0, 0, 18024201, 0, 0, 18024245, 0, 0, 18024289, 0, 0, 18024333, 0, 0, 18024377, 0, 0, 18024420, 0, 0, 18024464, 0, 0, 18024508, 0, 0, 18024552, 0, 0, 18024595, 0, 0, 18024639, 0, 0, 18024683, 0, 0, 18024727, 0, 0 )
+tile_data = PoolIntArray( 8061955, 0, 0, 8061999, 0, 0, 8062044, 0, 0, 8127102, 0, 0, 8127146, 0, 0, 8127191, 0, 0, 8127235, 0, 0, 8127279, 0, 0, 8127324, 0, 0, 8127368, 0, 0, 10158232, 0, 0, 10158276, 0, 0, 10158320, 0, 0, 10158364, 0, 0, 10158408, 0, 0, 10289698, 0, 0, 12584147, 0, 0, 12584191, 0, 0, 12714486, 0, 0, 15597524, 0, 0, 15534404, 0, 0, 15598020, 0, 0, 15598454, 0, 0, 18022400, 0, 0, 18022445, 0, 0, 18022490, 0, 0, 18022534, 0, 0, 18022578, 0, 0, 18022622, 0, 0, 18022666, 0, 0, 18022710, 0, 0, 18022754, 0, 0, 18022798, 0, 0, 18022842, 0, 0, 18022886, 0, 0, 18022930, 0, 0, 18022973, 0, 0, 18023017, 0, 0, 18023061, 0, 0, 18023105, 0, 0, 18023149, 0, 0, 18023193, 0, 0, 18023236, 0, 0, 18023280, 0, 0, 18023324, 0, 0, 18023367, 0, 0, 18023410, 0, 0, 18023453, 0, 0, 18023497, 0, 0, 18023541, 0, 0, 18023585, 0, 0, 18023629, 0, 0, 18023673, 0, 0, 18023717, 0, 0, 18023761, 0, 0, 18023805, 0, 0, 18023849, 0, 0, 18023893, 0, 0, 18023937, 0, 0, 18023981, 0, 0, 18024025, 0, 0, 18024069, 0, 0, 18024113, 0, 0, 18024157, 0, 0, 18024201, 0, 0, 18024245, 0, 0, 18024289, 0, 0, 18024333, 0, 0, 18024377, 0, 0, 18024420, 0, 0, 18024464, 0, 0, 18024508, 0, 0, 18024552, 0, 0, 18024595, 0, 0, 18024639, 0, 0, 18024683, 0, 0, 18024727, 0, 0 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -56,8 +60,46 @@ position = Vector2( 1232.95, 472.752 )
 [node name="ToiletPaper02" parent="ToiletPapers" instance=ExtResource( 4 )]
 position = Vector2( 1058.21, 488.541 )
 
+[node name="ToiletPaper03" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1358.74, 200.643 )
+
+[node name="ToiletPaper04" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1731.47, 200.643 )
+
+[node name="ToiletPaper05" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2123.16, 202.448 )
+
+[node name="ToiletPaper06" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 2473.33, 343.239 )
+
+[node name="ToiletPaper07" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 3078.01, 482.224 )
+
+[node name="ToiletPaper08" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 3135.77, 422.659 )
+
+[node name="ToiletPaper09" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 3218.8, 387.461 )
+
+[node name="ToiletPaper10" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 3308.14, 409.121 )
+
 [node name="EnemyTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 4469.86, 455 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 8 )
 [connection signal="scoreUpdate" from="Player" to="HUD" method="_on_Player_scoreUpdate"]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
