@@ -17,6 +17,7 @@ The only fix would be to manually fix every sprite frame to move the character t
 
 ## Technologies and Resources Used 
 Game engine: Godot \
+Original art: Casey Luthman
 Sprites: gameart2d.com and clipart.com \
 Sounds: freesound.org 
 
@@ -40,9 +41,9 @@ For issues, new animated sprites will be used that are centered, not offset.
   * Murun T
     * Programming and repository maintainer
   * Casey Luthman
-    * Art
+    * Original Art
   * Destiny Chamorro
     * Title and End Screen
   * Hongbo Na
-    * Art
+    * QA Testing
 
