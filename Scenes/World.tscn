@@ -13,7 +13,8 @@
 [ext_resource path="res://Assets/GroceryAisle.jpg" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -51,11 +52,15 @@ SPEED = 120
 script = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="HUD"]
-margin_left = 20.0
-margin_top = 29.4737
-margin_right = 104.0
-margin_bottom = 43.4737
+margin_left = 46.723
+margin_top = 52.8563
+margin_right = 216.723
+margin_bottom = 79.8563
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Toilet Paper"
 __meta__ = {
 "_edit_use_anchors_": false
 }
