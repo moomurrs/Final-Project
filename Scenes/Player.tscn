@@ -95,7 +95,7 @@ script = ExtResource( 2 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 13
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -106,7 +106,7 @@ shape = SubResource( 2 )
 current = true
 limit_left = -50
 limit_top = -100
-limit_right = 4700
+limit_right = 4650
 limit_bottom = 600
 smoothing_enabled = true
 

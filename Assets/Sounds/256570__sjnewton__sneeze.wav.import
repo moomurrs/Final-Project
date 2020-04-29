@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/256570__sjnewton__sneeze.wav-cd5ef0d7eff1d25897cbe8970256b496.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/256570__sjnewton__sneeze.wav"
+dest_files=[ "res://.import/256570__sjnewton__sneeze.wav-cd5ef0d7eff1d25897cbe8970256b496.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

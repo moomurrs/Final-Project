@@ -3,3 +3,4 @@ Game Jam
 
 Original design by Casey
 Sprite from gameart2d.com and clipart.com
+Sounds from freesound.org

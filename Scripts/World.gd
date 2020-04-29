@@ -11,6 +11,7 @@ func _ready():
 
 # create a new enemy every few seconds
 func _on_EnemyTimer_timeout():
+	$Sounds/Sneeze.play()
 	var enemy = ENEMY.instance()
 	enemy.position.x = $Player.position.x
 	enemy.position.y = $Player.position.y - 550
