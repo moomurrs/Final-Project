@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GroundTile.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/ToiletPaper.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 5 )
 
 [node name="World" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 101.067, 459.917 )
@@ -19,10 +27,33 @@ tile_data = PoolIntArray( 10158232, 0, 0, 10158276, 0, 0, 10158320, 0, 0, 101583
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy00" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 546.343, 468.996 )
+position = Vector2( 546.343, 477.417 )
 
 [node name="Enemy01" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 604.343, 240.996 )
+position = Vector2( 599.08, 249.417 )
 
-[node name="ToiletPaper" parent="." instance=ExtResource( 4 )]
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 20.0
+margin_top = 29.4737
+margin_right = 104.0
+margin_bottom = 43.4737
+custom_fonts/font = SubResource( 1 )
+text = "Toilet Paper: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToiletPapers" type="Node2D" parent="."]
+
+[node name="ToiletPaper00" parent="ToiletPapers" instance=ExtResource( 4 )]
 position = Vector2( 346.628, 260.12 )
+
+[node name="ToiletPaper01" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1232.95, 472.752 )
+
+[node name="ToiletPaper02" parent="ToiletPapers" instance=ExtResource( 4 )]
+position = Vector2( 1058.21, 488.541 )
+[connection signal="scoreUpdate" from="Player" to="HUD" method="_on_Player_scoreUpdate"]

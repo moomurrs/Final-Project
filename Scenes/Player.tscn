@@ -62,30 +62,30 @@
 [ext_resource path="res://Assets/Sprites/Player/Dead (7).png" type="Texture" id=60]
 [ext_resource path="res://Assets/Sprites/Player/Dead (8).png" type="Texture" id=61]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "idle",
-"speed": 16.0
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 29 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "run",
-"speed": 16.0
-}, {
-"frames": [ ExtResource( 35 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 44 ), ExtResource( 37 ), ExtResource( 45 ), ExtResource( 41 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 39 ) ],
-"loop": true,
-"name": "jump",
-"speed": 16.0
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 54 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 53 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 51 ), ExtResource( 50 ), ExtResource( 48 ), ExtResource( 52 ) ],
 "loop": false,
 "name": "dead",
-"speed": 16.0
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 44 ), ExtResource( 37 ), ExtResource( 45 ), ExtResource( 41 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "jump",
+"speed": 20.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 49.2233, 72.4554 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -93,14 +93,14 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "dead"
 frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -47.7159, -6.20147 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

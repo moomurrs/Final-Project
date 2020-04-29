@@ -7,7 +7,7 @@ const JUMP = -900
 const FLOOR = Vector2(0, -1)
 var onGround = false
 var isDead = false
-
+signal scoreUpdate
 
 
 func _ready():
@@ -59,6 +59,10 @@ func _physics_process(delta):
 				# if the collision object is Enemey, kill player
 				if "Enemy" in get_slide_collision(i).collider.name:
 					dead()
+				if "ToiletPaper" in get_slide_collision(i).collider.name:
+					emit_signal("scoreUpdate")
+					get_node("/root/Global").increaseScore()
+					get_slide_collision(i).collider.queue_free()
 # kills the player
 func dead():
 	isDead = true
