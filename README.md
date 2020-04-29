@@ -16,9 +16,9 @@ Unfortunately, this fix only works if the character *inside* the animated sprite
 The only fix would be to manually fix every sprite frame to move the character towards the center. This fix is time-consuming as we have 40+ frames of sprites.
 
 ## Technologies and Resources Used 
-Game engine: Godot
-Sprites: gameart2d.com and clipart.com
-Sounds: freesound.org
+Game engine: Godot \
+Sprites: gameart2d.com and clipart.com \
+Sounds: freesound.org \
 
 ## Objective of the Game
 The goal of the game is to collect the most amount of toilet paper without touching the virus. This will be challenging as the virus spawns every few seconds. You'll win the game if you can make it to the exit!
@@ -30,7 +30,7 @@ The player is controlled with A as left, W as jump, and D as right.
 <img src="Assets/Screenshots/shot2.png" width = 500>
 
 ## Future plans
-For the future, we would like to add masks and gloves which prevent the player from dying immediately. 
+For the future, we would like to add masks and gloves which prevent the player from dying immediately. \
 For issues, new animated sprites will be used that are centered, not offset.
 
 ---
