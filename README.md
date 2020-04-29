@@ -10,8 +10,8 @@ This game was developed as a final project for C220 as part of a 48-hour game ja
 The theme of the game jam was CoronaVirus. The most prevalent thoughts were people panic-buying toilet paper and masks. The most obvious idea was to make a 2D side-scroller where the player collects toilet paper while avoiding the coronavirus.
 
 ## Challenges and Struggles
-The biggest issue that effects the feel of the game was moving left and right. Currently, the animated sprites only face right. This works great when the player moves right. However, when the player turns left, the animated sprite continue to face right and looks like their moon-walking.
-The fix for this issue is usually simple: reverse the animated sprite on left movement with "flip-h = true". 
+The biggest issue that effects the feel of the game was moving left and right. Currently, the animated sprites only face right. This works great when the player moves right. However, when the player turns left, the animated sprite continue to face right and looks like their moon-walking.\
+The fix for this issue is usually simple: reverse the animated sprite on left movement with "flip-h = true".\ 
 Unfortunately, this fix only work if the character inside the animated sprite is centered. Our character inside the animated sprite is offset to one side. Therefore, when reversing the sprite, the character flips to the other side and creates the effect of teleportation. 
 TODO add picture
 
@@ -30,6 +30,7 @@ TODO add pictures
 ## Future plans
 For the future, we will add masks and glove prevent the player from dying immediately. 
 For issues, new animated sprites will be used that are centered, not offset.
+
 ---
 
 ### Team Members
