@@ -22,12 +22,7 @@ func _physics_process(delta):
 	
 	if not isDead:
 		
-		
-		
-		
-		
-		
-			# horizontal movement
+		# horizontal movement
 		if Input.is_action_pressed("ui_right"):
 			velocity.x = SPEED
 			
@@ -42,6 +37,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			$AnimatedSprite.play("idle")
 		
+		# vertical movement
 		if Input.is_action_pressed("ui_up"):
 			if onGround:
 				velocity.y = JUMP
@@ -88,7 +84,7 @@ func dead():
 	$Timer.start()
 		
 
-
+# calls death screen on timeout
 func _on_Timer_timeout():
 	# call death screen
 	get_tree().change_scene("res://Scenes/EndScreen.tscn")
