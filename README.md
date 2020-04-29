@@ -25,7 +25,8 @@ The goal of the game is to collect the most amount of toilet paper without touch
 
 ## How to Play
 The player is controlled with A as left, W as jump, and D as right.
-TODO add pictures
+![screenshot1](Assets/screenshots/shot1.png)
+![screenshot2](Assets/screenshots/shot2.png)
 
 ## Future plans
 For the future, we will add masks and glove prevent the player from dying immediately. 
