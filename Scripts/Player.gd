@@ -61,7 +61,7 @@ func _physics_process(delta):
 					dead()
 				if "ToiletPaper" in get_slide_collision(i).collider.name:
 					emit_signal("scoreUpdate")
-					get_node("/root/Global").increaseScore()
+					#get_node("/root/Global").increaseScore()
 					get_slide_collision(i).collider.queue_free()
 # kills the player
 func dead():

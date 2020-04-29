@@ -3,7 +3,7 @@ extends Node2D
 var score = 0
 
 func _ready():
-	pass
+	score = 0
 
 func increaseScore():
 	score += 1

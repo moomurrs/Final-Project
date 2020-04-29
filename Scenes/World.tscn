@@ -9,7 +9,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 25
+size = 30
 font_data = ExtResource( 5 )
 
 [node name="World" type="Node2D"]
@@ -41,7 +41,6 @@ margin_top = 29.4737
 margin_right = 104.0
 margin_bottom = 43.4737
 custom_fonts/font = SubResource( 1 )
-text = "Toilet Paper: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
