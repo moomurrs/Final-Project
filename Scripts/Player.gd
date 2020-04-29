@@ -76,6 +76,7 @@ func _physics_process(delta):
 					
 # kills the player
 func dead():
+	$Death.play()
 	isDead = true
 	# stop player motion
 	velocity = Vector2(0,0)

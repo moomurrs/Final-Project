@@ -95,7 +95,7 @@ position = Vector2( 2817.32, 493.047 )
 position = Vector2( 2823.19, 363.695 )
 
 [node name="ToiletPaper11" parent="ToiletPapers" instance=ExtResource( 4 )]
-position = Vector2( 3791.19, 35.6944 )
+position = Vector2( 3841.41, 23.7361 )
 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 4.0
