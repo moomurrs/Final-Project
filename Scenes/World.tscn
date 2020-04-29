@@ -55,4 +55,9 @@ position = Vector2( 1232.95, 472.752 )
 
 [node name="ToiletPaper02" parent="ToiletPapers" instance=ExtResource( 4 )]
 position = Vector2( 1058.21, 488.541 )
+
+[node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
 [connection signal="scoreUpdate" from="Player" to="HUD" method="_on_Player_scoreUpdate"]
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]

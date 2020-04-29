@@ -4,7 +4,7 @@
 
 extends KinematicBody2D
 
-const GRAVITY = 10
+const GRAVITY = 5
 const SPEED = 60
 const FLOOR = Vector2(0, -1)
 # 1 is right, 0 is left
@@ -18,7 +18,7 @@ func _physics_process(delta):
 	# control the direction of movement
 	velocity.x = SPEED * direction
 	
-	# rotate the virus accordingly
+	# rotate the virus accordingly to make it look like it's rolling
 	if	direction == 1:
 		#$Sprite.flip_h = false
 		rotate(delta)
@@ -26,6 +26,7 @@ func _physics_process(delta):
 		rotate(-delta)
 		#$Sprite.flip_h = true
 	
+	# apply gravity
 	velocity.y += GRAVITY
 	
 	

@@ -1,3 +1,7 @@
+# Game Jam 2020
+# Programmer: Murun T
+# Team: TP Gang
+
 extends KinematicBody2D
 
 var velocity = Vector2()
@@ -9,14 +13,20 @@ var onGround = false
 var isDead = false
 signal scoreUpdate
 
-
 func _ready():
+	# is anyone actually going to read this?
 	pass
 
 
 func _physics_process(delta):
 	
 	if not isDead:
+		
+		
+		
+		
+		
+		
 			# horizontal movement
 		if Input.is_action_pressed("ui_right"):
 			velocity.x = SPEED
@@ -25,7 +35,7 @@ func _physics_process(delta):
 			$AnimatedSprite.flip_h = false
 		elif Input.is_action_pressed("ui_left"):
 			velocity.x = -SPEED
-			
+			# TODO fix awkward reverse
 			$AnimatedSprite.play("run")
 			#$AnimatedSprite.flip_h = true
 		else:
@@ -63,6 +73,7 @@ func _physics_process(delta):
 					emit_signal("scoreUpdate")
 					#get_node("/root/Global").increaseScore()
 					get_slide_collision(i).collider.queue_free()
+					
 # kills the player
 func dead():
 	isDead = true
@@ -80,3 +91,5 @@ func dead():
 func _on_Timer_timeout():
 	# call death screen
 	get_tree().change_scene("res://Scenes/Death.tscn")
+
+	
