@@ -11,8 +11,8 @@ The theme of the game jam was CoronaVirus. The most prevalent thoughts were peop
 
 ## Challenges and Struggles
 The biggest issue that effects the feel of the game was moving left and right. Currently, the animated sprites only face right. This works great when the player moves right. However, when the player turns left, the animated sprite continues to face right and looks like they're moon-walking.\
-The fix for this issue is usually simple: reverse the animated sprite for the left movement with "flip-h = true".\ 
-Unfortunately, this fix only works if the character *inside* the animated sprite is centered. Our character inside the animated sprite is offset to one side. Therefore, when reversing the sprite, the character flips to the other side and creates the effect of teleportation. 
+The fix for this issue is usually simple: reverse the animated sprite for the left movement with "flip-h = true".
+Unfortunately, this fix only works if the character *inside* the animated sprite is *centered*. Our character inside the animated sprite is offset to one side. Therefore, when reversing the sprite, the character flips to the other side and creates the effect of teleportation. 
 The only fix would be to manually fix every sprite frame to move the character towards the center. This fix is time-consuming as we have 40+ frames of sprites.
 
 ## Technologies and Resources Used 
