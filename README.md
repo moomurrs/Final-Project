@@ -1,6 +1,37 @@
-# Final-Project
-Game Jam
+# Supply Run
+## by TP Gang
+### For BL-MSCH-C220 at Indiana University, Bloomington
+### April 29, 2020
 
-Original design by Casey
-Sprite from gameart2d.com and clipart.com
-Sounds from freesound.org
+---
+
+This game was developed as a final project for C220 as part of a 48-hour game jam. 
+## Game Creation
+The theme of the game jam was CoronaVirus. The most prevalent thoughts were people panic-buying toilet paper and masks. The most obvious idea was to make a 2D side-scroller where the player collects toilet paper while avoiding the coronavirus.
+
+## Challenges and Struggles
+
+## Technologies and Resources Used 
+Game engine: Godot
+Sprites: gameart2d.com and clipart.com
+Sounds: freesound.org
+
+## Objective of the Game
+The goal of the game is to collect the most amount of toilet paper without touching the virus. This will be challenging as the virus spawns every few seconds.
+
+## How to Play
+The player is controlled with A as left, W as jump, and D as right.
+
+## Future plans
+For the future, we will add masks and glove prevent the player from dying immediately. 
+---
+
+###Team Members
+
+  * Murun T
+    * Programming and repository maintainer
+  * Member 2
+    * Contributions
+  * Member 3
+    * Contributions
+
