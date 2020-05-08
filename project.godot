@@ -17,7 +17,9 @@ _global_script_class_icons={
 
 config/name="Final-Project"
 run/main_scene="res://Scenes/MainScreen.tscn"
+boot_splash/image="res://Assets/ToiletPaper1.png"
 config/icon="res://Assets/virus1.png"
+config/windows_native_icon="res://Assets/myicon.ico"
 
 [autoload]
 
